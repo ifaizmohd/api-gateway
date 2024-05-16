@@ -1,8 +1,8 @@
 import axios, { Axios, AxiosRequestConfig, AxiosResponse } from "axios";
-import { ApiResponse } from "../interfaces/handlers/ApiHandler";
+import { Handler, ApiResponse } from "../interfaces/handlers/ApiHandler";
 import { ApiError } from "../utils/apiErrorHandler";
 
-export class ApiHandler {
+export class ApiHandler implements Handler {
   private static axiosInstance: Axios;
 
   static configure(config: AxiosRequestConfig): void {
